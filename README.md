@@ -25,7 +25,7 @@ $ npm install -g nxplus
 $ nxplus COMMAND
 running command...
 $ nxplus (-v|--version|version)
-nxplus/1.0.0 darwin-x64 node-v12.16.2
+nxplus/1.1.0 darwin-x64 node-v12.16.2
 $ nxplus --help [COMMAND]
 USAGE
   $ nxplus COMMAND
@@ -61,7 +61,7 @@ OPTIONS
   --skip-install
 ```
 
-_See code: [src/commands/create.ts](https://github.com/beeman/nxplus/blob/v1.0.0/src/commands/create.ts)_
+_See code: [src/commands/create.ts](https://github.com/beeman/nxplus/blob/v1.1.0/src/commands/create.ts)_
 
 ## `nxplus hello [FILE]`
 
@@ -81,7 +81,7 @@ EXAMPLE
   hello world from ./src/hello.ts!
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/beeman/nxplus/blob/v1.0.0/src/commands/hello.ts)_
+_See code: [src/commands/hello.ts](https://github.com/beeman/nxplus/blob/v1.1.0/src/commands/hello.ts)_
 
 ## `nxplus help [COMMAND]`
 
@@ -113,7 +113,7 @@ OPTIONS
   -j, --json
 ```
 
-_See code: [src/commands/scope/get.ts](https://github.com/beeman/nxplus/blob/v1.0.0/src/commands/scope/get.ts)_
+_See code: [src/commands/scope/get.ts](https://github.com/beeman/nxplus/blob/v1.1.0/src/commands/scope/get.ts)_
 
 ## `nxplus scope:set [SCOPE]`
 
@@ -129,6 +129,6 @@ OPTIONS
   --dry-run
 ```
 
-_See code: [src/commands/scope/set.ts](https://github.com/beeman/nxplus/blob/v1.0.0/src/commands/scope/set.ts)_
+_See code: [src/commands/scope/set.ts](https://github.com/beeman/nxplus/blob/v1.1.0/src/commands/scope/set.ts)_
 
 <!-- commandsstop -->
