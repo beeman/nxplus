@@ -39,7 +39,6 @@ USAGE
 <!-- commands -->
 
 - [`nxplus create NAME`](#nxplus-create-name)
-- [`nxplus hello [FILE]`](#nxplus-hello-file)
 - [`nxplus help [COMMAND]`](#nxplus-help-command)
 - [`nxplus scope:get`](#nxplus-scopeget)
 - [`nxplus scope:set [SCOPE]`](#nxplus-scopeset-scope)
@@ -62,26 +61,6 @@ OPTIONS
 ```
 
 _See code: [src/commands/create.ts](https://github.com/beeman/nxplus/blob/v1.1.0/src/commands/create.ts)_
-
-## `nxplus hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ nxplus hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ nxplus hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/beeman/nxplus/blob/v1.1.0/src/commands/hello.ts)_
 
 ## `nxplus help [COMMAND]`
 

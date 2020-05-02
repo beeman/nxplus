@@ -1,0 +1,76 @@
+{
+  "version": "1.1.0",
+  "commands": {
+    "create": {
+      "id": "create",
+      "description": "Create an empty Nx Workspace",
+      "pluginName": "nxplus",
+      "pluginType": "core",
+      "aliases": [],
+      "flags": {
+        "help": {
+          "name": "help",
+          "type": "boolean",
+          "char": "h",
+          "description": "show CLI help",
+          "allowNo": false
+        },
+        "dry-run": { "name": "dry-run", "type": "boolean", "allowNo": false },
+        "skip-git": { "name": "skip-git", "type": "boolean", "allowNo": false },
+        "skip-install": { "name": "skip-install", "type": "boolean", "allowNo": false },
+        "cli": {
+          "name": "cli",
+          "type": "option",
+          "helpValue": "(angular|nx)",
+          "options": ["angular", "nx"],
+          "default": "nx"
+        },
+        "package-manager": {
+          "name": "package-manager",
+          "type": "option",
+          "helpValue": "(yarn|npm)",
+          "options": ["yarn", "npm"],
+          "default": "yarn"
+        }
+      },
+      "args": [{ "name": "name", "required": true }]
+    },
+    "scope:get": {
+      "id": "scope:get",
+      "description": "Get the NPM Scope of an Nx Workspace",
+      "pluginName": "nxplus",
+      "pluginType": "core",
+      "aliases": [],
+      "flags": {
+        "help": {
+          "name": "help",
+          "type": "boolean",
+          "char": "h",
+          "description": "show CLI help",
+          "allowNo": false
+        },
+        "json": { "name": "json", "type": "boolean", "char": "j", "allowNo": false }
+      },
+      "args": []
+    },
+    "scope:set": {
+      "id": "scope:set",
+      "description": "Set the NPM Scope of an Nx Workspace",
+      "pluginName": "nxplus",
+      "pluginType": "core",
+      "aliases": [],
+      "flags": {
+        "help": {
+          "name": "help",
+          "type": "boolean",
+          "char": "h",
+          "description": "show CLI help",
+          "allowNo": false
+        },
+        "dry-run": { "name": "dry-run", "type": "boolean", "allowNo": false },
+        "silent": { "name": "silent", "type": "boolean", "char": "s", "allowNo": false }
+      },
+      "args": [{ "name": "scope", "required": false }]
+    }
+  }
+}
