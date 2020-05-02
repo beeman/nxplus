@@ -1,9 +1,8 @@
 import { Command, flags } from '@oclif/command'
-import { execSync } from 'child_process'
 import { writeFileSync } from 'fs'
 import * as inquirer from 'inquirer'
 import { uniq } from 'lodash'
-import { error, getPkgJson, log } from '../lib/utils'
+import { error, exec, getPkgJson, log } from '../lib/utils'
 import { getRecipe } from '../recipes'
 
 export default class Generate extends Command {
@@ -56,7 +55,7 @@ export default class Generate extends Command {
     if (collections.length) {
       log(`Installing collections: ${collections.join(' ')}`)
       if (!dryRun) {
-        execSync(`yarn add ${collections.join(' ')}`)
+        exec(`yarn add ${collections.join(' ')}`, { stdio: 'ignore' })
       }
     } else {
       log(`All dependencies are installed`)
@@ -76,7 +75,7 @@ export default class Generate extends Command {
       if (dryRun) {
         log('Command', command)
       } else {
-        execSync(command, { stdio: [0, 1, 2] })
+        exec(command)
       }
     }
 

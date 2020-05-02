@@ -1,6 +1,6 @@
 // This file borrows heavily from https://github.com/nrwl/nx/blob/master/packages/create-nx-workspace/bin/create-nx-workspace.ts
 import { bold, inverse, magentaBright, yellowBright, redBright } from 'chalk'
-import { execSync } from 'child_process'
+import { execSync, ExecSyncOptions } from 'child_process'
 import { readFileSync } from 'fs'
 import { removeSync, writeFileSync } from 'fs-extra'
 import { join } from 'path'
@@ -13,6 +13,9 @@ export const log = (msg: string, ...params: unknown[]): void =>
 
 export const error = (msg: string, ...params: unknown[]): void =>
   console.log(` ${err()} `, `${yellowBright(msg)}`, ...params)
+
+export const exec = (command: string, options?: ExecSyncOptions): Buffer =>
+  execSync(command, { stdio: [0, 1, 2], ...options })
 
 const tsVersion = '3.8.3'
 const cliVersion = '9.2.3'
@@ -82,10 +85,7 @@ export function createSandbox(
     }),
   )
 
-  execSync(`${packageManager} install --silent`, {
-    cwd: tmpDir,
-    stdio: [0, 1, 2],
-  })
+  exec(`${packageManager} install --silent`, { cwd: tmpDir })
 
   return tmpDir
 }
@@ -115,9 +115,7 @@ export function createApp(
   ].join(' ')
 
   log('Creating app', `${cli.command} ${params}`)
-  execSync(`"${join(tmpDir, 'node_modules', '.bin', cli.command)}" ${params}`, {
-    stdio: [0, 1, 2],
-  })
+  exec(`"${join(tmpDir, 'node_modules', '.bin', cli.command)}" ${params}`)
 }
 
 export interface CreateAppOptions {
