@@ -12,7 +12,9 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
     "chalk": "^4.0.0",
+    "degit": "^2.8.0",
     "fs-extra": "^9.0.0",
+    "inquirer": "^7.1.0",
     "replace-in-file": "^6.0.0",
     "tmp": "^0.2.1",
     "tslib": "^1"
@@ -23,6 +25,7 @@
     "@types/chai": "^4",
     "@types/chalk": "^2.2.0",
     "@types/fs-extra": "^8.1.0",
+    "@types/inquirer": "^6.5.0",
     "@types/mocha": "^5",
     "@types/node": "^10",
     "@types/tmp": "^0.2.0",

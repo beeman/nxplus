@@ -9,10 +9,10 @@ import { dirSync } from 'tmp'
 export const info = (label = 'NXPLUS'): string => inverse(magentaBright(bold(` ${label} `)))
 export const err = (label = 'ERROR'): string => inverse(redBright(bold(` ${label} `)))
 export const log = (msg: string, ...params: unknown[]): void =>
-  console.log(`  ${info()}  `, `${yellowBright(msg)}`, ...params)
+  console.log(` ${info()} `, `${yellowBright(msg)}`, ...params)
 
 export const error = (msg: string, ...params: unknown[]): void =>
-  console.log(`  ${err()}  `, `${yellowBright(msg)}`, ...params)
+  console.log(` ${err()} `, `${yellowBright(msg)}`, ...params)
 
 const tsVersion = '3.8.3'
 const cliVersion = '9.2.3'
@@ -33,6 +33,10 @@ export function validateScope(scope: string): boolean {
 
 export function getNxJson(): { [key: string]: any } {
   return JSON.parse(readFileSync(join(process.cwd(), 'nx.json'), 'utf8'))
+}
+
+export function getPkgJson(): { [key: string]: any } {
+  return JSON.parse(readFileSync(join(process.cwd(), 'package.json'), 'utf8'))
 }
 
 export function determineCli(cli: string): NxCli | null {

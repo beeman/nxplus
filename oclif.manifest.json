@@ -35,6 +35,50 @@
       },
       "args": [{ "name": "name", "required": true }]
     },
+    "generate": {
+      "id": "generate",
+      "description": "describe the command here",
+      "pluginName": "nxplus",
+      "pluginType": "core",
+      "aliases": [],
+      "flags": {
+        "help": {
+          "name": "help",
+          "type": "boolean",
+          "char": "h",
+          "description": "show CLI help",
+          "allowNo": false
+        },
+        "name": {
+          "name": "name",
+          "type": "option",
+          "char": "n",
+          "description": "Name of the app",
+          "required": true
+        },
+        "dry-run": { "name": "dry-run", "type": "boolean", "allowNo": false }
+      },
+      "args": [{ "name": "preset" }]
+    },
+    "prisma:init": {
+      "id": "prisma:init",
+      "description": "describe the command here",
+      "pluginName": "nxplus",
+      "pluginType": "core",
+      "aliases": [],
+      "flags": {
+        "help": {
+          "name": "help",
+          "type": "boolean",
+          "char": "h",
+          "description": "show CLI help",
+          "allowNo": false
+        },
+        "name": { "name": "name", "type": "option", "char": "n", "description": "name to print" },
+        "force": { "name": "force", "type": "boolean", "char": "f", "allowNo": false }
+      },
+      "args": [{ "name": "file" }]
+    },
     "scope:get": {
       "id": "scope:get",
       "description": "Get the NPM Scope of an Nx Workspace",

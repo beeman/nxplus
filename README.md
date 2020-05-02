@@ -39,7 +39,9 @@ USAGE
 <!-- commands -->
 
 - [`nxplus create NAME`](#nxplus-create-name)
+- [`nxplus generate [PRESET]`](#nxplus-generate-preset)
 - [`nxplus help [COMMAND]`](#nxplus-help-command)
+- [`nxplus prisma:init [FILE]`](#nxplus-prismainit-file)
 - [`nxplus scope:get`](#nxplus-scopeget)
 - [`nxplus scope:set [SCOPE]`](#nxplus-scopeset-scope)
 
@@ -62,6 +64,22 @@ OPTIONS
 
 _See code: [src/commands/create.ts](https://github.com/beeman/nxplus/blob/v1.1.0/src/commands/create.ts)_
 
+## `nxplus generate [PRESET]`
+
+describe the command here
+
+```
+USAGE
+  $ nxplus generate [PRESET]
+
+OPTIONS
+  -h, --help       show CLI help
+  -n, --name=name  (required) Name of the app
+  --dry-run
+```
+
+_See code: [src/commands/generate.ts](https://github.com/beeman/nxplus/blob/v1.1.0/src/commands/generate.ts)_
+
 ## `nxplus help [COMMAND]`
 
 display help for nxplus
@@ -78,6 +96,22 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src/commands/help.ts)_
+
+## `nxplus prisma:init [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ nxplus prisma:init [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/prisma/init.ts](https://github.com/beeman/nxplus/blob/v1.1.0/src/commands/prisma/init.ts)_
 
 ## `nxplus scope:get`
 
