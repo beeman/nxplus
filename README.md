@@ -1,0 +1,72 @@
+nxplus
+======
+
+Utilities for Nx Workspace
+
+[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
+[![Version](https://img.shields.io/npm/v/nxplus.svg)](https://npmjs.org/package/nxplus)
+[![CircleCI](https://circleci.com/gh/beeman/nxplus/tree/master.svg?style=shield)](https://circleci.com/gh/beeman/nxplus/tree/master)
+[![Codecov](https://codecov.io/gh/beeman/nxplus/branch/master/graph/badge.svg)](https://codecov.io/gh/beeman/nxplus)
+[![Downloads/week](https://img.shields.io/npm/dw/nxplus.svg)](https://npmjs.org/package/nxplus)
+[![License](https://img.shields.io/npm/l/nxplus.svg)](https://github.com/beeman/nxplus/blob/master/package.json)
+
+<!-- toc -->
+* [Usage](#usage)
+* [Commands](#commands)
+<!-- tocstop -->
+# Usage
+<!-- usage -->
+```sh-session
+$ npm install -g nxplus
+$ nxplus COMMAND
+running command...
+$ nxplus (-v|--version|version)
+nxplus/1.0.0 darwin-x64 node-v12.16.2
+$ nxplus --help [COMMAND]
+USAGE
+  $ nxplus COMMAND
+...
+```
+<!-- usagestop -->
+# Commands
+<!-- commands -->
+* [`nxplus hello [FILE]`](#nxplus-hello-file)
+* [`nxplus help [COMMAND]`](#nxplus-help-command)
+
+## `nxplus hello [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ nxplus hello [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+
+EXAMPLE
+  $ nxplus hello
+  hello world from ./src/hello.ts!
+```
+
+_See code: [src/commands/hello.ts](https://github.com/beeman/nxplus/blob/v1.0.0/src/commands/hello.ts)_
+
+## `nxplus help [COMMAND]`
+
+display help for nxplus
+
+```
+USAGE
+  $ nxplus help [COMMAND]
+
+ARGUMENTS
+  COMMAND  command to show help for
+
+OPTIONS
+  --all  see all commands in CLI
+```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src/commands/help.ts)_
+<!-- commandsstop -->
