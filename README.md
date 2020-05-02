@@ -1,5 +1,4 @@
-nxplus
-======
+# nxplus
 
 Utilities for Nx Workspace
 
@@ -11,11 +10,16 @@ Utilities for Nx Workspace
 [![License](https://img.shields.io/npm/l/nxplus.svg)](https://github.com/beeman/nxplus/blob/master/package.json)
 
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+
+- [nxplus](#nxplus)
+- [Usage](#usage)
+- [Commands](#commands)
 <!-- tocstop -->
+
 # Usage
+
 <!-- usage -->
+
 ```sh-session
 $ npm install -g nxplus
 $ nxplus COMMAND
@@ -27,11 +31,35 @@ USAGE
   $ nxplus COMMAND
 ...
 ```
+
 <!-- usagestop -->
+
 # Commands
+
 <!-- commands -->
-* [`nxplus hello [FILE]`](#nxplus-hello-file)
-* [`nxplus help [COMMAND]`](#nxplus-help-command)
+
+- [`nxplus create NAME`](#nxplus-create-name)
+- [`nxplus hello [FILE]`](#nxplus-hello-file)
+- [`nxplus help [COMMAND]`](#nxplus-help-command)
+
+## `nxplus create NAME`
+
+Create an empty Nx Workspace
+
+```
+USAGE
+  $ nxplus create NAME
+
+OPTIONS
+  -h, --help                    show CLI help
+  --cli=(angular|nx)            [default: nx]
+  --dry-run
+  --package-manager=(yarn|npm)  [default: yarn]
+  --skip-git
+  --skip-install
+```
+
+_See code: [src/commands/create.ts](https://github.com/beeman/nxplus/blob/v1.0.0/src/commands/create.ts)_
 
 ## `nxplus hello [FILE]`
 
@@ -69,4 +97,5 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src/commands/help.ts)_
+
 <!-- commandsstop -->
