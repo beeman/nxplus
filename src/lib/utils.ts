@@ -1,13 +1,18 @@
 // This file borrows heavily from https://github.com/nrwl/nx/blob/master/packages/create-nx-workspace/bin/create-nx-workspace.ts
-import { bold, inverse, magentaBright, yellowBright } from 'chalk'
+import { bold, inverse, magentaBright, yellowBright, redBright } from 'chalk'
 import { execSync } from 'child_process'
+import { readFileSync } from 'fs'
 import { removeSync, writeFileSync } from 'fs-extra'
 import { join } from 'path'
 import { dirSync } from 'tmp'
 
-const tag = (label = 'NXPLUS'): string => inverse(magentaBright(bold(` ${label} `)))
-const log = (msg: string, ...params: unknown[]): void =>
-  console.log(`  ${tag()}  `, `${yellowBright(msg)}`, ...params)
+export const info = (label = 'NXPLUS'): string => inverse(magentaBright(bold(` ${label} `)))
+export const err = (label = 'ERROR'): string => inverse(redBright(bold(` ${label} `)))
+export const log = (msg: string, ...params: unknown[]): void =>
+  console.log(`  ${info()}  `, `${yellowBright(msg)}`, ...params)
+
+export const error = (msg: string, ...params: unknown[]): void =>
+  console.log(`  ${err()}  `, `${yellowBright(msg)}`, ...params)
 
 const tsVersion = '3.8.3'
 const cliVersion = '9.2.3'
@@ -18,6 +23,16 @@ export interface NxCli {
   package: string
   version: string
   command: string
+}
+
+export function validateScope(scope: string): boolean {
+  const re = new RegExp(/^[a-z0-9-]+$/i)
+
+  return re.test(scope)
+}
+
+export function getNxJson(): { [key: string]: any } {
+  return JSON.parse(readFileSync(join(process.cwd(), 'nx.json'), 'utf8'))
 }
 
 export function determineCli(cli: string): NxCli | null {

@@ -41,6 +41,8 @@ USAGE
 - [`nxplus create NAME`](#nxplus-create-name)
 - [`nxplus hello [FILE]`](#nxplus-hello-file)
 - [`nxplus help [COMMAND]`](#nxplus-help-command)
+- [`nxplus scope:get`](#nxplus-scopeget)
+- [`nxplus scope:set [SCOPE]`](#nxplus-scopeset-scope)
 
 ## `nxplus create NAME`
 
@@ -97,5 +99,36 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src/commands/help.ts)_
+
+## `nxplus scope:get`
+
+Get the NPM Scope of an Nx Workspace
+
+```
+USAGE
+  $ nxplus scope:get
+
+OPTIONS
+  -h, --help  show CLI help
+  -j, --json
+```
+
+_See code: [src/commands/scope/get.ts](https://github.com/beeman/nxplus/blob/v1.0.0/src/commands/scope/get.ts)_
+
+## `nxplus scope:set [SCOPE]`
+
+Set the NPM Scope of an Nx Workspace
+
+```
+USAGE
+  $ nxplus scope:set [SCOPE]
+
+OPTIONS
+  -h, --help    show CLI help
+  -s, --silent
+  --dry-run
+```
+
+_See code: [src/commands/scope/set.ts](https://github.com/beeman/nxplus/blob/v1.0.0/src/commands/scope/set.ts)_
 
 <!-- commandsstop -->
