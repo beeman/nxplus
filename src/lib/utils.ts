@@ -20,7 +20,7 @@ export const exec = (command: string, options?: ExecSyncOptions): Buffer =>
 const tsVersion = '3.8.3'
 const cliVersion = '9.2.4'
 const angularCliVersion = '9.1.4'
-const prettierVersion = '2.0.5'
+const prettierVersion = '1.19.1'
 
 export interface NxCli {
   package: string
