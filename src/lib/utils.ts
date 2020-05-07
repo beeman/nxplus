@@ -18,7 +18,7 @@ export const exec = (command: string, options?: ExecSyncOptions): Buffer =>
   execSync(command, { stdio: [0, 1, 2], ...options })
 
 const tsVersion = '3.8.3'
-const cliVersion = '9.2.3'
+const cliVersion = '9.2.4'
 const angularCliVersion = '9.1.4'
 const prettierVersion = '2.0.5'
 
