@@ -99,12 +99,13 @@ export function createApp(
   const skipGitArg = skipGit ? ` --skipGit` : ``
   const skipInstallArg = skipInstall ? ` --skipInstall` : ``
   const dryRunArg = dryRun ? ` --dryRun` : ``
+  const preset = cli.command === 'ng' ? `` : `empty`
 
   const collectionArg = '--collection=@nrwl/workspace'
   const params = [
     `new`,
     name,
-    'empty',
+    preset,
     appNameArg,
     styleArg,
     dryRunArg,
