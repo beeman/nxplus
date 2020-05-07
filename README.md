@@ -25,7 +25,7 @@ $ npm install -g nxplus
 $ nxplus COMMAND
 running command...
 $ nxplus (-v|--version|version)
-nxplus/1.1.4 darwin-x64 node-v12.16.2
+nxplus/1.1.5 darwin-x64 node-v12.16.2
 $ nxplus --help [COMMAND]
 USAGE
   $ nxplus COMMAND
@@ -62,7 +62,7 @@ OPTIONS
   --skip-install
 ```
 
-_See code: [src/commands/create.ts](https://github.com/beeman/nxplus/blob/v1.1.4/src/commands/create.ts)_
+_See code: [src/commands/create.ts](https://github.com/beeman/nxplus/blob/v1.1.5/src/commands/create.ts)_
 
 ## `nxplus generate [PRESET]`
 
@@ -78,7 +78,7 @@ OPTIONS
   --dry-run
 ```
 
-_See code: [src/commands/generate.ts](https://github.com/beeman/nxplus/blob/v1.1.4/src/commands/generate.ts)_
+_See code: [src/commands/generate.ts](https://github.com/beeman/nxplus/blob/v1.1.5/src/commands/generate.ts)_
 
 ## `nxplus help [COMMAND]`
 
@@ -111,7 +111,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/prisma/init.ts](https://github.com/beeman/nxplus/blob/v1.1.4/src/commands/prisma/init.ts)_
+_See code: [src/commands/prisma/init.ts](https://github.com/beeman/nxplus/blob/v1.1.5/src/commands/prisma/init.ts)_
 
 ## `nxplus scope:get`
 
@@ -126,7 +126,7 @@ OPTIONS
   -j, --json
 ```
 
-_See code: [src/commands/scope/get.ts](https://github.com/beeman/nxplus/blob/v1.1.4/src/commands/scope/get.ts)_
+_See code: [src/commands/scope/get.ts](https://github.com/beeman/nxplus/blob/v1.1.5/src/commands/scope/get.ts)_
 
 ## `nxplus scope:set [SCOPE]`
 
@@ -142,6 +142,6 @@ OPTIONS
   --dry-run
 ```
 
-_See code: [src/commands/scope/set.ts](https://github.com/beeman/nxplus/blob/v1.1.4/src/commands/scope/set.ts)_
+_See code: [src/commands/scope/set.ts](https://github.com/beeman/nxplus/blob/v1.1.5/src/commands/scope/set.ts)_
 
 <!-- commandsstop -->
